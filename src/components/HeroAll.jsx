@@ -21,7 +21,7 @@ const HeroAll = ({ settings, images, height, heading_1, text }) => {
                 <h1 className="text-4xl md:text-5xl font-bold">{heading_1}</h1>
                 <p className="mt-4 text-lg md:text-2xl">{text}</p>
                 <Link
-                  to="/donate"
+                  to="/donate#donate"
                   className="mt-8 text-xl inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg hover:bg-yellow-600"
                 >
                   Donate Now

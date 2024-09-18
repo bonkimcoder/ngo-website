@@ -85,7 +85,7 @@ const Header = () => {
         {/* Donate Button */}
         <div className="hidden md:block">
           <Link
-            to="/donate"
+            to="/donate#donate"
             className="bg-yellow-500 hover:bg-yellow-600 text-black uppercase px-4 py-2 rounded"
           >
             Donate
@@ -125,7 +125,7 @@ const Header = () => {
 
           <div className="text-center">
             <Link
-              to="/donate"
+              to="/donate#donate"
               className="bg-yellow-500 hover:bg-yellow-600 text-black uppercase px-4 py-2 rounded  text-center"
               onClick={handleMobileMenu}
             >

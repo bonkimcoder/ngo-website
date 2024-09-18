@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import HeroAll from "../components/HeroAll";
 import slider_1 from "../assets/slider_1.jpg";
 import slider_2 from "../assets/slider_2.jpg";
@@ -9,6 +10,9 @@ import Testimonial from "../components/Testimonial";
 import CTA from "../components/CTA";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, []);
   const settings = {
     dots: true,
     infinite: true,

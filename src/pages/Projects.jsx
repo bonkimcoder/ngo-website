@@ -6,8 +6,13 @@ import ProjectsData from "../components/ProjectsData";
 import Team from "../components/Team";
 import CTA from "../components/CTA";
 import FounderStatement from "../components/FounderStatement";
+import { useEffect } from "react";
 
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,

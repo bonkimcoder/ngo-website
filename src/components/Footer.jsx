@@ -52,15 +52,15 @@ const Footer = () => {
           )}
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between mb-12">
-          <div className="mb-8 md:mb-0">
+        <div className="flex flex-col md:flex-row justify-between mb-12 items-center">
+          <div className="mb-8 md:mb-0 text-center">
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
             <p className="mb-2">123 NGO Street, City, Country</p>
             <p className="mb-2">Phone: (123) 456-7890</p>
             <p>Email: contact@leau.org</p>
           </div>
 
-          <div className="mb-8 md:mb-0">
+          <div className="mb-8 md:mb-0 text-center justify-center">
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -74,19 +74,19 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/donate" className="hover:underline">
+                <Link to="/donate#donate" className="hover:underline">
                   Donate
                 </Link>
               </li>
               <li>
-                <Link to="/volunteer" className="hover:underline">
+                <Link to="/volunteer#volunteer" className="hover:underline">
                   Volunteer
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex gap-4 text-center justify-center">
             <Link to="#" className="text-gray-400 hover:text-white">
               <FaFacebook size={20} />
             </Link>

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import HeroAll from "../components/HeroAll";
 import slider_1 from "../assets/slider_1.jpg";
 import slider_2 from "../assets/slider_2.jpg";
@@ -9,6 +10,9 @@ import FounderStatement from "../components/FounderStatement";
 import FAQ from "../components/FAQ";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, []);
   const settings = {
     dots: true,
     infinite: true,

@@ -57,13 +57,13 @@ const Testimonial = () => {
         <Divider />
         <div className="relative">
           <button
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-green-700 text-white p-3 rounded-full hover:bg-green-800"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-transparent md:bg-green-800 text-black md:text-white hover:bg-green-800"
             onClick={handlePrev}
           >
             &#10094;
           </button>
 
-          <div className="testimonial-slider">
+          <div className="testimonial-slider mx-0 md:mx-5">
             <div
               className="testimonial-wrapper"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -87,7 +87,7 @@ const Testimonial = () => {
           </div>
 
           <button
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-green-700 text-white p-3 rounded-full hover:bg-green-800"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-transparent md:bg-green-700 text-black md:text-white p-3 rounded-full hover:bg-green-900"
             onClick={handleNext}
           >
             &#10095;

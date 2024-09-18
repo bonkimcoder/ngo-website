@@ -32,7 +32,7 @@ const DonateForm = () => {
   };
 
   return (
-    <section className="relative py-16 bg-green-100">
+    <section className="relative py-16 bg-green-100" id="donate">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl font-bold text-gray-800">Support Our Cause</h2>
         <Divider />

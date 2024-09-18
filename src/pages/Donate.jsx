@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import HeroAll from "../components/HeroAll";
 import slider_1 from "../assets/slider_1.jpg";
 import slider_2 from "../assets/slider_2.jpg";
@@ -6,6 +8,18 @@ import DonateForm from "../components/DonateForm";
 import FAQ from "../components/FAQ";
 
 const Donate = () => {
+  const { hash } = useLocation(); // Get the current hash in the URL
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.substring(1)); // Remove the '#' and get the element by id
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" }); // Scroll to the section smoothly
+      }
+    } else {
+      window.scrollTo(0, 0); // Scroll to the top if no hash is present
+    }
+  }, [hash]); // Trigger useEffect when the hash changes
   const settings = {
     dots: true,
     infinite: true,
@@ -25,8 +39,8 @@ const Donate = () => {
           settings={settings}
           images={images}
           height="h-96"
-          heading_1="Talk To Us Now"
-          text="Share your recommendation, concern or query with us"
+          heading_1="Support The Cause"
+          text="Your financial support comes in handy"
         />
       </section>
       <DonateForm />

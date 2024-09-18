@@ -17,15 +17,15 @@ const FAQ = () => {
           Frequently Asked Questions
         </h2>
         <Divider />
-        <div className="flex gap-8">
-          <div className="w-1/3 hidden md:block">
+        <div className="flex gap-8 items-start">
+          <div className="w-1/2 hidden md:block">
             <img
               src={slider_1}
               alt="slider-1"
-              className="w-full h-2/3 object-cover"
+              className="w-full h-[800px] object-cover"
             />
           </div>
-          <div className="space-y-6 flex-1">
+          <div className="space-y-6 flex-grow">
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -47,7 +47,7 @@ const FAQ = () => {
                   </span>
                 </button>
                 <div
-                  className={`transition-max-height duration-500 ease-in-out overflow-hidden ${
+                  className={`transition-max-height duration-500 ease-out overflow-hidden ${
                     openIndex === index ? "max-h-[1000px]" : "max-h-0"
                   }`}
                 >

@@ -15,14 +15,14 @@ const CTA = () => {
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-6">
           <Link
-            to="/donate"
+            to="/donate#donate"
             className="bg-yellow-500  hover:bg-yellow-600 duration-200 text-black px-8 py-4 rounded-lg text-xl font-semibold"
           >
             Donate Now
           </Link>
 
           <Link
-            to="/volunteer"
+            to="/volunteer#volunteer"
             className="bg-white text-green-700 border-2 border-white hover:bg-green-600 hover:border-green-600 hover:text-white duration-200 px-8 py-4 rounded-lg text-xl font-semibold"
           >
             Become a Volunteer
