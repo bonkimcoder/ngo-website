@@ -18,7 +18,7 @@ const FAQ = () => {
         </h2>
         <Divider />
         <div className="flex gap-8">
-          <div className="w-1/3">
+          <div className="w-1/3 hidden md:block">
             <img
               src={slider_1}
               alt="slider-1"
@@ -29,11 +29,11 @@ const FAQ = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden "
+                className="bg-white rounded-lg shadow-lg overflow-hidden"
               >
                 <button
                   onClick={() => handleToggle(index)}
-                  className="w-full text-left px-6 py-4 bg-gray-200 border-b border-gray-300  focus:outline-none"
+                  className="w-full text-left px-6 py-4 bg-gray-200 border-b border-gray-300 focus:outline-none"
                 >
                   <h3 className="text-xl font-semibold text-gray-800">
                     {faq.question}
@@ -46,11 +46,15 @@ const FAQ = () => {
                     &#9660;
                   </span>
                 </button>
-                {openIndex === index && (
+                <div
+                  className={`transition-max-height duration-500 ease-in-out overflow-hidden ${
+                    openIndex === index ? "max-h-[1000px]" : "max-h-0"
+                  }`}
+                >
                   <div className="px-6 py-4">
                     <p className="text-gray-600">{faq.answer}</p>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
